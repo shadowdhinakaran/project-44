@@ -12,7 +12,7 @@ import Contact from './components/Contact';
 function App() {
   return (
     <BrowserRouter>
-    <Routes>
+    <Routes>      
       {/* Show Home component at root URL */}
       <Route path="/" element={<Intro />} />
 
