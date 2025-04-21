@@ -37,8 +37,7 @@ const Intro = () => {
         {/* Navbar */}
         <nav className="navbar navbar-expand-md navbar-dark px-3">
           <p className="navbar-brand m-0 fw-bold text-white" id="name">
-            S.<span style={{ color: "yellow" }}>DHINAKA</span>
-            <span style={{ color: "red" }}>RAN</span>
+           S.DHINAKARAN
           </p>
 
           <button

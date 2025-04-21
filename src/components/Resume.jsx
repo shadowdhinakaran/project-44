@@ -36,7 +36,7 @@ export default function Resume() {
       <div style={{ position: "relative", zIndex: "1" }}>
         {/* Navbar */}
         <nav className="navbar navbar-expand-md navbar-dark px-3">
-          <p className="navbar-brand m-0 fw-bold text-white">S.DHINAKARAN</p>
+          <p className="navbar-brand m-0 fw-bold text-white" id="name">S.DHINAKARAN</p>
           <button
             className="navbar-toggler"
             type="button"
@@ -64,9 +64,6 @@ export default function Resume() {
 
         {/* Resume Section */}
         <Container className="py-5 min-vh-100" id="resume">
-          <h2 className="text-center text-white fw-bold mb-5 text-decoration-underline">
-            Resume
-          </h2>
           <Row className="align-items-center justify-content-center text-center text-md-start">
             {/* Resume Image */}
             <Col xs={12} md={6} className="mb-4 mb-md-0 d-flex justify-content-center">
@@ -118,6 +115,19 @@ export default function Resume() {
                   </a>
                 </div>
               </motion.div>
+            </Col>
+            <Col xs={12} md={6} className="d-flex justify-content-center align-items-center">
+            <div className="mt-3 text-center">
+                <h1 className="gradient-text">SKILLS</h1>
+                 <ul className="list-unstyled d-flex flex-wrap justify-content-center gap-4" style={{textAlign:'justify'}}>
+                  <li className="p-3 bg-warning text-white rounded-pill">HTML</li>
+                  <li className="p-3 bg-success text-white rounded-pill">CSS</li>
+                  <li className="p-3 bg-danger text-white rounded-pill">JAVASCRIPT</li>
+                  <li className="p-3 bg-secondary text-white rounded-pill">REACT.JS</li>
+                  <li className="p-3 bg-primary text-white rounded-pill">BOOTSTRAP</li>
+                  <li className="p-3 bg-warning text-white rounded-pill">GITHUB</li>
+                  </ul> 
+              </div>
             </Col>
           </Row>
         </Container>

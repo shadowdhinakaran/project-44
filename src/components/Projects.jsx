@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import bgImage from "../assests/image/wallpaper5.png";
 import MyToto from "../assests/image/my_toto.PNG";
 import MyWeather from "../assests/image/weather.PNG";
-import Mylight from "../assests/image/light.PNG";
+import Mylight from "../assests/image/lights.PNG";
 
 // Reusable ProjectCard Component
 function ProjectCard({ title, description, image, link, link2, index }) {
@@ -52,8 +52,8 @@ export default function Projects() {
 
   const projectData = [
     {
-      title: "Portfolio Website",
-      description: "A personal portfolio site built with React and Bootstrap.",
+      title: "light App",
+      description: "A Simple light on, off  built with React and Bootstrap.",
       image: Mylight,
       link: "https://github.com/shadowdhinakaran/light-app",
       link2: "https://light-app-51c6be.netlify.app/",
@@ -114,12 +114,12 @@ export default function Projects() {
                   <NavLink
                     to={`/${item}`}
                     className={({ isActive }) =>
-                      `nav-link text-white ${isActive ? "active" : ""}`
+                      `nav-link text-white ${isActive ? "active-link" : ""}`
                     }
                   >
                     {item.toUpperCase()}
                   </NavLink>
-                </li>
+                </li>        
               ))}
             </ul>
           </div>

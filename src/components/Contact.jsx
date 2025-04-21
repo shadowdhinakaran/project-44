@@ -44,7 +44,7 @@ export default function Contact() {
       <div style={{ position: "relative", zIndex: 1 }}>
         {/* Navbar */}
         <nav className="navbar navbar-expand-md navbar-dark px-3">
-          <p className="navbar-brand m-0 fw-bold text-white">S.DHINAKARAN</p>
+          <p className="navbar-brand m-0 fw-bold "id="name">S.DHINAKARAN</p>
           <button className="navbar-toggler" type="button" onClick={toggleNavbar}>
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -68,10 +68,6 @@ export default function Contact() {
 
         {/* Contact Section */}
         <div className="container py-5">
-          <h2 className="text-center text-white fw-bold mb-5 text-decoration-underline">
-            Contact Me
-          </h2>
-
           <Row className="align-items-start justify-content-center">
             {/* Contact Form */}
             <Col md={6} className="mb-4">

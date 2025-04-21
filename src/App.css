@@ -56,7 +56,7 @@ body, html {
   }
   
   nav ul li:hover {
-    background-color: ghostwhite;
+    background-color: aqua;
   }
   nav ul li:hover a {
     color: black !important;
@@ -65,7 +65,7 @@ body, html {
   .nav-link.active-link{
     color: yellow !important;
     font-weight: bold;
-    border-bottom: 2px solid darkblue;
+    border-bottom: 2px solid whitesmoke;
   }
   .icon-link {
     color:yellow;
@@ -77,4 +77,8 @@ body, html {
   .text-para{
     text-align: justify;
   }
-  
+  .gradient-text{
+    background: linear-gradient(to right, red, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

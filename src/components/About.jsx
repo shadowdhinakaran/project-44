@@ -37,7 +37,7 @@ export default function About() {
       <div style={{ position: "relative", zIndex: 1 }}>
         {/* Navbar */}
         <nav className="navbar navbar-expand-md navbar-dark px-3">
-          <p className="navbar-brand m-0 fw-bold text-white">S.DHINAKARAN</p>
+          <p className="navbar-brand m-0 fw-bold text-white"id="name">S.DHINAKARAN</p>
 
           <button className="navbar-toggler" type="button" onClick={toggleNavbar}>
             <span className="navbar-toggler-icon"></span>
