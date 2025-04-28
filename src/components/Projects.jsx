@@ -2,9 +2,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card, Button } from "react-bootstrap";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import bgImage from "../assests/image/wallpaper5.png";
 import MyToto from "../assests/image/my_toto.PNG";
 import MyWeather from "../assests/image/weather.PNG";
@@ -31,7 +31,12 @@ function ProjectCard({ title, description, image, link, link2, index }) {
           <Card.Title>{title}</Card.Title>
           <Card.Text>{description}</Card.Text>
           <div className="d-flex justify-content-center align-items-center gap-2">
-            <Button variant="success" href={link} target="_blank" className="mt-auto">
+            <Button
+              variant="success"
+              href={link}
+              target="_blank"
+              className="mt-auto"
+            >
               Source Code
             </Button>
             <Button href={link2} target="_blank" className="mt-auto">
@@ -46,9 +51,23 @@ function ProjectCard({ title, description, image, link, link2, index }) {
 
 // Main Projects Component
 export default function Projects() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [ismobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  const toggleNavbar = () => setIsOpen(!isOpen);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+      if (window.innerWidth < 768) {
+        setSidebarOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
+  const closeSidebar = () => setSidebarOpen(false);
+
+  const menuLinks = ["home", "about", "project", "resume", "contact"];
 
   const projectData = [
     {
@@ -103,13 +122,17 @@ export default function Projects() {
             S.DHINAKARAN
           </p>
 
-          <button className="navbar-toggler" type="button" onClick={toggleNavbar}>
+          <button
+            className="navbar-toggler"
+            type="button"
+            onClick={toggleSidebar}
+          >
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
+          <div className="collapse navbar-collapse d-none d-md-block">
             <ul className="navbar-nav ms-auto text-center text-md-end">
-              {["home", "about", "project", "resume", "contact"].map((item) => (
+              {menuLinks.map((item) => (
                 <li className="nav-item" key={item}>
                   <NavLink
                     to={`/${item}`}
@@ -119,11 +142,65 @@ export default function Projects() {
                   >
                     {item.toUpperCase()}
                   </NavLink>
-                </li>        
+                </li>
               ))}
             </ul>
           </div>
         </nav>
+
+        {/* Sidebar for Mobile */}
+        <AnimatePresence>
+          {ismobile && isSidebarOpen && (
+            <motion.div
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              style={{
+                position: "fixed",
+                top: 0,
+                left: 0,
+                width: "250px",
+                height: "100vh",
+                backgroundColor: "rgb(0, 0, 0)",
+                padding: "2rem 1rem",
+                zIndex: 9999,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              {/* Close Icon */}
+              <div className="d-flex gap-5 ">
+                <p className="navbar-brand mt-1 fw-bold text-center" id="name">
+                  S.DHINAKARAN
+                </p>
+                <button
+                  type="button"
+                  className="btn-close btn-close-white align-self-end mb-4"
+                  aria-label="Close"
+                  onClick={closeSidebar}
+                  style={{ fontSize: "1.5rem" }}
+                ></button>
+              </div>
+              {/* Nav Links */}
+              <ul className="navbar-nav w-100 text-center">
+                {menuLinks.map((route) => (
+                  <li className="nav-item my-3" key={route}>
+                    <NavLink
+                      to={`/${route}`}
+                      className="nav-link text-primary border border-success rounded"
+                      onClick={closeSidebar}
+                      style={{ fontSize: "1.1rem" }}
+                    >
+                      {route.toUpperCase()}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Projects Section */}
         <div className="min-vh-100 pt-5">

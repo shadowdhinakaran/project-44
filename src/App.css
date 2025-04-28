@@ -68,11 +68,13 @@ body, html {
     border-bottom: 2px solid whitesmoke;
   }
   .icon-link {
-    color:yellow;
+    color:yellow !important;
     transition: color 0.3s;
+    
   }
   .icon-link:hover{
-    color: white ;
+    
+    color: white !important;
   }
   .text-para{
     text-align: justify;
@@ -82,3 +84,144 @@ body, html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  /* Sidebar base styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden by default */
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.938);
+  padding-top: 60px;
+  transition: 0.3s;
+  z-index: 2000;
+}
+
+/* When sidebar is open */
+.sidebar.open {
+  left: 0;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.typewriter {
+  font-family: monospace;
+  font-size: 28px;
+  position: relative;
+  height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  color: yellow;
+  border-right: 2px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.static-text {
+  display: inline;
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  top: 0;
+  left: 110px; /* Move after "HI, I'M " width */
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.7s step-end infinite;
+}
+
+.dhinakaran {
+  animation: typingDhinakaran 8s steps(10, end) infinite;
+}
+
+.webdeveloper {
+  animation: typingWebDeveloper 8s steps(13, end) infinite;
+}
+
+@keyframes typingDhinakaran {
+  0%, 5% {
+    width: 0;
+    opacity: 1;
+  }
+  20%, 30% {
+    width: 10ch;
+    opacity: 1;
+  }
+  35%, 45% {
+    width: 10ch;
+    opacity: 0;
+  }
+  50%, 100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes typingWebDeveloper {
+  0%, 45% {
+    width: 0;
+    opacity: 0;
+  }
+  50%, 55% {
+    width: 0;
+    opacity: 1;
+  }
+  70%, 80% {
+    width: 13ch;
+    opacity: 1;
+  }
+  85%, 95% {
+    width: 13ch;
+    opacity: 0;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0%, 50% { border-color: black; }
+  51%, 100% { border-color: transparent; }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .typewriter {
+    font-size: 22px;  /* Smaller font for mobile */
+    justify-content: flex-start;  /* Left-align text on mobile */
+    flex-direction: row;  /* Keep content in row */
+  }
+
+  .static-text {
+    position: absolute;
+    left:80px;
+  }
+
+  .text {
+    position: absolute;
+    left: 120px;  /* Ensure the text starts after "HI, I'M" */
+  }
+}
+
+/* For very small screens like 480px */
+@media (max-width: 480px) {
+  .typewriter {
+    font-size: 18px;  /* Even smaller font */
+  }
+
+  .text {
+    left: 90px;  /* Adjust text alignment on small screens */
+  }
+}
