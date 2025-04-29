@@ -113,7 +113,7 @@ body, html {
   color: white;
   cursor: pointer;
 }
-
+/* typewriter effect  */
 .typewriter {
   font-family: monospace;
   font-size: 28px;
@@ -206,7 +206,7 @@ body, html {
 
   .static-text {
     position: absolute;
-    left:80px;
+    left:70px;
   }
 
   .text {
@@ -224,4 +224,14 @@ body, html {
   .text {
     left: 90px;  /* Adjust text alignment on small screens */
   }
+}
+/*skills   */
+
+.skills-icon li{
+  transition:all 0.3s ease;
+}
+.skills-icon li:hover{
+  transform:scale(1.3);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  cursor:pointer;
 }

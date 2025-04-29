@@ -126,7 +126,7 @@ const Intro = () => {
                   <NavLink
                     to={`/${route}`}
                     className={({ isActive }) =>
-                      `nav-link text-white border border-success bg-secondary rounded`
+                      `nav-link text-white  bg-secondary rounded`
                     }
                     onClick={closeSidebar}
                     style={{ fontSize: "1.1rem" }}

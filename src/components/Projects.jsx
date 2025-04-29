@@ -189,7 +189,7 @@ export default function Projects() {
                   <li className="nav-item my-3" key={route}>
                     <NavLink
                       to={`/${route}`}
-                      className="nav-link text-primary border border-success rounded"
+                      className="nav-link text-white  bg-secondary rounded"
                       onClick={closeSidebar}
                       style={{ fontSize: "1.1rem" }}
                     >
@@ -203,7 +203,7 @@ export default function Projects() {
         </AnimatePresence>
 
         {/* Projects Section */}
-        <div className="min-vh-100 pt-5">
+        <div className="min-vh-100 pt-5 ">
           <div className="row justify-content-center align-items-stretch">
             {projectData.map((project, index) => (
               <ProjectCard key={index} {...project} index={index} />

@@ -120,7 +120,7 @@ export default function Resume() {
                   <li className="nav-item my-3" key={route}>
                     <NavLink
                       to={`/${route}`}
-                      className="nav-link text-primary border border-success rounded"
+                      className="nav-link text-white  bg-secondary rounded"
                       onClick={closeSidebar}
                       style={{ fontSize: "1.1rem" }}
                     >
@@ -199,7 +199,7 @@ export default function Resume() {
               <div className="mt-3 text-center">
                 <h1 className="gradient-text">SKILLS</h1>
                 <ul
-                  className="list-unstyled d-flex flex-wrap justify-content-center gap-4"
+                  className="list-unstyled d-flex flex-wrap justify-content-center gap-4 skills-icon"
                   style={{ textAlign: "justify" }}
                 >
                   <li className="p-3 bg-warning text-white rounded-pill">

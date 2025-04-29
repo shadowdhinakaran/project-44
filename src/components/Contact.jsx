@@ -126,7 +126,7 @@ const menuLinks =  ["home", "about", "project", "resume", "contact"];
                   <li className="nav-item my-3" key={route}>
                     <NavLink
                       to={`/${route}`}
-                      className="nav-link text-primary border border-success rounded"
+                      className="nav-link text-white  bg-secondary rounded"
                       onClick={closeSidebar}
                       style={{ fontSize: "1.1rem" }}
                     >
