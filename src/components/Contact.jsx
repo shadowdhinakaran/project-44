@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
 import { FaEnvelope, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
-import bgImage from "../assests/image/wallpaper5.png"; // ✅ fixed path
+import bgImage from "../assests/image/movingBlue.gif"; // ✅ fixed path
 import {motion, AnimatePresence } from "framer-motion";
 
 export default function Contact() {
@@ -174,7 +174,7 @@ const menuLinks =  ["home", "about", "project", "resume", "contact"];
             {/* Social Icons */}
             <Col md={4} className="d-flex flex-column align-items-center gap-3 text-white">
               <p className="fw-semibold">Connect with me:</p>
-              <div className="d-flex gap-4 ">
+              <div className="d-flex gap-4 icon-links ">
                 <a
                   href="https://linkedin.com/in/your-profile"
                   target="_blank"

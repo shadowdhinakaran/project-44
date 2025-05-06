@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 import { NavLink } from "react-router-dom";
-import BgImage from "../../src/assests/image/wallpaper5.png";
+import BgImage from "../../src/assests/image/movingBlue.gif";
 
 // Menu Links Array
 const menuLinks = ["home", "about", "project", "resume", "contact"];

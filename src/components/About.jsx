@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Myphoto from "../assests/image/dhinakaran2.png"; // ✅ Fixed path
 import { AnimatePresence, motion } from "framer-motion";
-import bgImage from "../assests/image/wallpaper5.png"; // ✅ Fixed path
+import bgImage from "../assests/image/movingBlue.gif"; // ✅ Fixed path
 
 export default function About() {
  const [isSidebarOpen, setSidebarOpen] = useState(false);

@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Card, Button } from "react-bootstrap";
 import { AnimatePresence, motion } from "framer-motion";
-import bgImage from "../assests/image/wallpaper5.png";
+import bgImage from "../assests/image/movingBlue.gif";
 import MyToto from "../assests/image/my_toto.PNG";
 import MyWeather from "../assests/image/weather.PNG";
 import Mylight from "../assests/image/lights.PNG";

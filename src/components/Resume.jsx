@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Container, Button, Row, Col } from "react-bootstrap";
 import ResumePhoto from "../assests/image/resumeimage.png"; // ✅ Fixed path
-import bgImage from "../assests/image/wallpaper5.png"; // ✅ Fixed path
+import bgImage from "../assests/image/movingBlue.gif"; // ✅ Fixed path
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function Resume() {

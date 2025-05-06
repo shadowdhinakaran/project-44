@@ -3,7 +3,7 @@ import "../App.css";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Myphoto from "../assests/image/dhinakaran2.png";
-import bgImage from "../../src/assests/image/wallpaper5.png";
+import bgImage from "../../src/assests/image/movingBlue.gif";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
